@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction to the DRMC</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.highlight {
+    			background-color: yellow; /* You can change this color to your preferred highlight color */
+				}
+			
+			.white-text {
+				color: white; /* Set the text color to white */
+				padding: 20px; /* Add some padding for content inside the container */
+				}
+
+			.white-text h1 {
+				color: white; /* Set the text color to white */
+				padding: 20px; /* Add some padding for content inside the container */
+				}
+
+			.light-background {
+				background-color: rgba(255, 255, 255, 0.5); /* Use rgba to set the background color with transparency */
+				padding: 20px; /* Add padding for content inside the container */
+				}
+				.center-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      max-height: 90vh; /* Limit the maximum height of the container to 90% of the viewport height */
+      overflow: auto; /* Add scrollbars if content overflows */
+    }
+
+    /* Define a grid container */
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+      gap: 10px; /* Reduce the gap between QR codes */
+    }
+
+    /* Style for individual QR code items */
+    .qr-code {
+      width: 100%; /* Ensure the QR codes take up the full width of their container */
+      max-width: 300px; /* Limit the maximum width of each QR code */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Sunsetting digital content</h3>
+					<img src="img/dolphinsun.gif" alt="Dolphin Sunset" style="width: 400px;">
+					<aside class="notes"></aside>
+				</section>
+				<section>
+					<h3>Context</h3>
+					<div style="display: flex; align-items: center; height: 250px;">
+						<div style="flex: 1; text-align: right; padding-right: 35px;">LibGuides, Spotlight exhibits, Consul docs, notes, websites, social media, etc.</div>
+						<div style="width: 5px; height: 100%; background-color: #000;"></div> 
+						<div style="flex: 1; text-align: left; padding-left: 35px;"><ul><li>Inherited someone else's work?</li><li>Change in priorities?</li></ul></div>
+					  </div>
+					  <img src="img/dragsun.gif" alt="dragonsun">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<p>Software and data management plans often include info about preservation</p>
+					<p>non-digital projects and initiatives seem easier to end</p>
+					<p class="fragment fade-in"><b>CONTENT CREATION SEEMS TO NEVER END</b></p>
+					
+					  
+					  <img src="img/dragsun.gif" alt="dragonsun">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h3>Challenges</h3>
+					<p class="fragment fade-in-then-semi-out">pressure to become insta-expert</p>
+					<p class="fragment fade-in-then-semi-out">understand inter-connectedness</p>
+					<p class="fragment fade-in">implement and manage changes</p>
+					  
+					  <img src="img/dragsun.gif" alt="dragonsun">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1>"less is more"</h1>
+					  <img src="img/dragsun.gif" alt="dragonsun">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h3>Recommendations (?)</h3>
+					<p class="fragment fade-in-then-semi-out">create and maintain an inventory</p>
+					<p class="fragment fade-in-then-semi-out">define where content lives</p>
+					<p class="fragment fade-in-then-semi-out">plan sunsetting process</p>
+					<p class="fragment fade-in">identify alternatives before creating something new</p>
+					  
+					  <img src="img/dragsun.gif" alt="dragonsun">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h3>Resource</h3>
+					<p>Bryn Mawr College</p>
+					<p>LITS Digital Project Sunsetting Policy</p>
+					<div style="text-align: center;">
+						<small style="color:black;">
+							<a href="https://www.brynmawr.edu/inside-324" target="_blank">www.brynmawr.edu/inside-324</a>
+						</small>
+						<br>
+						<img src="img/brynmawr.png" style="width: 200px;" alt="bryn mawr college sunsetting process">
+					</div>
+					
+
+				</section>
+
+				<section>
+					<h3>Thank you for listening</h3>
+					<img src="img/sun.gif" alt="Beautiful Sunset" style="width: 400px;">
+
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
