@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Introduction to the DRMC</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .blinking-text {
+        animation: blink 1.5s infinite;
+        animation-fill-mode: both;
+      }
+      .highlight {
+        background-color: yellow; /* You can change this color to your preferred highlight color */
+      }
+
+      .white-text {
+        color: white; /* Set the text color to white */
+        padding: 20px; /* Add some padding for content inside the container */
+      }
+
+      .white-text h1 {
+        color: white; /* Set the text color to white */
+        padding: 20px; /* Add some padding for content inside the container */
+      }
+
+      .light-background {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /* Use rgba to set the background color with transparency */
+        padding: 20px; /* Add padding for content inside the container */
+      }
+      .center-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        max-height: 90vh; /* Limit the maximum height of the container to 90% of the viewport height */
+        overflow: auto; /* Add scrollbars if content overflows */
+      }
+
+      /* Define a grid container */
+      .qr-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+        gap: 10px; /* Reduce the gap between QR codes */
+      }
+
+      /* Style for individual QR code items */
+      .qr-code {
+        width: 100%; /* Ensure the QR codes take up the full width of their container */
+        max-width: 300px; /* Limit the maximum width of each QR code */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      .dotted-border {
+        border: 5px;
+        border-radius: 25px;
+        border-style: dotted;
+        border-color: white;
+        margin: 50px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>COMING SOON!</h1>
+          <div class="dotted-border">
+            <h3>Current Activities at the David Rumsey Map Center</h3>
+          </div>
+          <aside class="notes"></aside>
+        </section>
+        <!-- <section data-transition="fade"data-background-image="img/ben-gitai-intro-slide.png">
+          <aside class="notes">
+            Good afternoon, everyone, and welcome! It’s wonderful to see so many
+            of you here today. I’m Evan Thornberry, the head and curator here at
+            the map center, and before I welcome our speaker, I want to briefly
+            acknowledge the nine year anniversary of the David Rumsey Map
+            Center. This is the first anniversary I’ve had here where I can
+            reflect on a full year.
+          </aside>
+        </section>
+        <section data-transition="fade" data-background-image="img/umar.JPG">
+          <aside class="notes">
+            The map center isn’t as a repository for Stanford’s amazing map
+            collections, or a hub for discussions, research, and events like
+            this. We’re also as an integral part of the student experience. To
+            me, that commitment to students in the last year has been visible in
+            so many ways - whether they were part of the 80 or so classes that
+            visited us or are one of our several fantastic student employees who
+            contribute to making this space a welcoming and open environment for
+            learning and research. Over the last year, we invited new types
+            contributions from students like Umar Patel, who last year developed
+            an app for the Apple Vision Pro, mashing up historical maps and
+            photographs into a virtual workd to explore, or Julie van den Hout
+            and Jenny O’Keefe, who are currently providing invaluable
+            instructional support for the many class visits we see throughout
+            the year.
+          </aside>
+        </section>
+
+        <section
+          data-transition="fade"
+          data-background-iframe="img/sanfrancisco/openlayers.html"
+        >
+          <aside class="notes">
+            A couple of weeks ago we partnered with Kim Beil, who is the
+            associate director of Stanford’s ITALIC program, to host the
+            Japanese artist Sohei Nishino. Sohei is known for his city dioramas
+            made up of thousands of photographs taken by the artist over the
+            course of a few months, then compiled into memoryscapes reflecting
+            his lived experience and perceptions of the city.
+          </aside>
+        </section>
+
+        <section
+          data-transition="fade"
+          data-background-video="img/italic_frottage_timelapse.mp4"
+          data-background-video-loop="true"
+        >
+          <aside class="notes">
+            While at Stanford, Sohei also led a workshop where ITALIC students
+            created their own map of Stanford's campus based on their
+            experiences and memories, using rubbings of objects on campus they
+            pass by everyday, or might be overlooked. Kim describes this as “a
+            map of feeling” or textures of campus, and is the inspiration for
+            this anniversary's keepsake poster, which will always remind us of
+            Sohei's visit, the 2025 ITALIC program, and the roles we can play in
+            the experiences of students here at Stanford.
+          </aside>
+        </section>
+
+        <section
+          data-transition="fade"
+          data-background-image="img/ben-gitai-intro-slide.png"
+        >
+          <aside class="notes">
+            This a good segway into my introduction to our speaker today, Dr.
+            Ben Gitai. Ben, an architect and researcher at the EPFL in Lausanne
+            Switzerland is the Head Coordinator at EPFL's Habitat Research
+            Center. Ben's work investigates how landscapes evolve – not just
+            physically, but also through history, politics, and the way we
+            perceive them. He’s recently launcehd a fascinating and impactfful
+            project: the Atlas of Landscapes of Paris, a deep dive into the
+            city’s terrain, its stories, and the many visions that have shaped
+            it. Working with Ben these past days has been incredible. His
+            visions are for truly living maps of cities like San Francisco, –
+            incorporating perspectives from residents, wildlife, even cars and
+            bikes we use move through the city. It's not just about boundaries,
+            but understanding how our experiences shape our cultural landscapes.
+          </aside>
+        </section>
+				<section data-transition="fade">
+					<div class="dotted-border"><h4>Looking ahead with legacy collections:</h4><p>How computer vision and AI are helping unlock the hidden knowledge within Stanford’s map collections.</p></div>
+					<p>Evan Thornberry, David Rumsey Map Center</p>
+					<aside class="notes">
+
+					  </aside>
+				</section>
+				<section data-transition="fade">
+					<h2>Stanford Libraries <br> + <br> David Rumsey <br> = <br> David Rumsey Map Center</h2>
+					<aside class="notes">
+						- we're a partnership between David Rumsey and Stanford Libraries
+						- we work with many great partners in the library and on campus
+						- our collections are cartographic in nature
+						- David has agreed to donate his collection to Stanford
+					  </aside>
+				</section>
+				
+				<section data-transition="fade">
+					<h1>historical maps as data</h1>
+					<aside class="notes">
+						Traditionally, historical maps have been utilized as visual geographic aids that align with specific research objectives. Researchers might handpick particular maps for detailed examination and analysis related to their work. 
+
+						More recently, as many of you know, historical maps have been brought into a digital world and used with GIS software for spatial analysis. There have been attempts to extract vector data from maps, mostly manually or semi-automatically. Any attempt that I'm aware of to automatically extract vector data has been largely innaccurate and have typically required a lot of time consuming manual clean up. 
+						
+						I'm going to mainly focus on map text as data, as opposed to features like roads, rivers, or buildings.
+					The concept of map text as a substantial body of data has remained underexplored—a void that the advent of machines capable of reading and interpreting maps has aimed to fill.
+					</aside>
+				</section>
+
+
+				<section data-transition="fade" data-background-image="img/15927000.jpg" data-background-size="contain">
+	
+					<aside class="notes">
+					the reason we think maps are beautiful is the same reason we've had trouble with extracting text from them in a programmatic way. Cartographic conventions encourage the creative use of font styles, sizes, orientation, color, for example. But advancements in object detection techniques have made it possible to identify variable text on maps. This is exciting because we've never had the ability to work with map text as a corpus of data before, like Google Books, Internet Archives, other large-scale OCR projects have for standard printed text. 
+					  </aside>
+				</section>
+
+				<section data-transition="fade">
+					<h2>Machines Reading Maps</h2>
+					<img src="img/mrm-people.png" style="height:600px; object-fit: contain;"></img>
+					<aside class="notes">
+						That's where Machines Reading Maps came in. The Machines Reading Maps project was a grant funded project that aimed to normalize map text as a new kind of data and transform how scholars interpret and interact with this new kind of map data.
+					  </aside>
+				</section>
+
+				<section data-transition="fade" data-background-color="white">
+					<p>MRM's MapKurator System</p>
+					<img src="img/mapkurator-system.png" style="height:500px; object-fit: contain;"></img>
+					<small>https://knowledge-computing.github.io/mapkurator-doc</small>
+					<aside class="notes">
+						Their flagship system was the mapKurator pipeline, which processes scanned historical map images to spit out text labels and their bounding polygons, and a geo-entity identifier from OpenStreetMap. 
+						
+						The full system is made up of several modules to process a large number of high-res map images. 
+						
+						ImageCropping breaks down large map images into smaller manageable patches which are then analyzed by PatchTextSpotter for text recognition. This module automatically identifies and interprets the text present on these patches using models trained with both synthetic text data and human-annotated information from the historical document annotation platform Recogito.
+
+Then, PatchtoMapMerging involves merging individual patch findings back into a cohesive map view, which enables visualization in tools like QGIS by converting image files back into JPEG. PostOCR then refines the recognized text, cross-referencing words against OpenStreetMap’s extensive toponym dictionary and corrects any misidentifications and improve accuracy.
+
+After verification, GeocoordinateConverter translates the identified text locations from pixel coordinates into geographical coordinates. Finally, EntityLinker links detected map texts to potential entities within OpenStreetMap by checking if the recognized text is part of an entity’s name and then confirming that it falls within the map boundaries using data derived from the GeocoordConverter.
+					  </aside>
+				</section>
+
+				<section data-transition="fade"
+					data-background-image="img/synthtext.png" data-background-size="contain">
+		
+					<aside class="notes">
+						The PatchTextSpotter was trained with a few datasets using the TESTER framework - which is transformer-based text detection framework. I mentioned from Recogito human annotations, and two sythnetic datasets: SynthText data and SynMap. Synmap uses OSM basemaps and label text that have been styled like historical maps, and SythnText places words in natural scenes, taking into account scene layout.
+						This is a synthtext dataset. 
+					  </aside>
+				</section>
+
+				<section data-transition="fade">
+				<h2>Living with Machines: MapReader</h2>
+				<ul>
+					<li>The Alan Turing Institute</li>
+					<li>Initially designed to work with large map sets</li>
+					<li>Classification + text spotting pipelines</li>
+				</ul>
+			
+
+				<aside class="notes">
+					Machines Reading Maps, as a grant funded endeavor ended in 2023, with a summit and public release that was hosted here at the DRMC in April 2023. But it's lineage was extended to make up the MapReader project. Living with machines is the larger research project and MapReader is their
+				  </aside>
+			</section>
+
+			<section data-transition="fade">
+				<h2>MapReader Classification</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/iTKPsV_FQW0?si=Quh5mGB3UDEprHWw&amp;start=151" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<small>https://www.youtube.com/watch?v=iTKPsV_FQW0</small>
+				<aside class="notes">
+				  </aside>
+			</section>
+
+			<section data-transition="fade">
+				<h2>MapReader Text Spotting</h2>
+				<img src="img/mapreader-text-spotting.png" style="object-fit: contain;"></img>
+
+				<aside class="notes">
+				  </aside>
+			</section>
+
+			<section data-transition="fade"
+					data-background-image="img/map-no-annotations.png" data-background-size="cover">
+
+					<div style="background-color: black; padding:25px;"><h2>Visualizing Text Annotations</h2></div>
+					<aside class="notes">
+						Let's take a quick look at what this means visually
+					  </aside>
+				</section>
+
+			<section data-transition="fade"
+					data-background-image="img/map-no-annotations.png" data-background-size="cover">
+	
+					<aside class="notes">
+					  </aside>
+				</section>
+
+				<section data-transition="fade"
+					data-background-image="img/map-annotations.png" data-background-size="cover">
+
+					<aside class="notes">
+					  </aside>
+				</section>
+
+				<section data-transition="fade"
+					data-background-image="img/map-annotations.png" data-background-size="cover">
+
+					<div style="background-color: black; padding:25px;"><h2>Unlocking Collections</h2>
+					<p>davidrumsey.com</p></div>
+					<aside class="notes">
+						Now I'm going to focus on how this technology is being used with Stanford's map collections – specifically the David Rumsey Map Collection. 
+
+						First I'm going to show how these text annotations are being used as an entry point to the collection. In the past we were limited to searching for maps by title, author, or date. But now we can search for maps by the text that appears on them.
+					  </aside>
+				</section>
+				
+				<section data-transition="fade"
+				data-background-video="img/text-on-maps-search.mov" data-background-size="contain">
+
+					<aside class="notes">
+						
+					  </aside>
+				</section>
+
+				<section data-transition="fade"
+				data-background-video="img/text-on-maps-results.mov" data-background-size="contain">
+					<aside class="notes">
+						Now, if I hover over a map in the collection, I can see a little orange marker that shows me where the text is located on the map.
+
+						CLicking on the map text will take me to the map zoomed into where the text is found.
+					  </aside>
+				</section>
+
+				<section data-transition="fade">
+					<div class="dotted-border"><h4>Machines Reading Maps - Stanford Digital Repository Data Collection</h4></div>
+					<p>175,000,000 DRMC collection annotations</p>
+					<p><a href="https://stanford.io/4fXX9Cf">stanford.io/4fXX9Cf</a></p>
+					<aside class="notes">
+						Also, the entire text annotation data collection is available via the Stanford Digital Repository. This is a dataset of 175,000,000 annotations from the David Rumsey Map Collection.
+					  </aside>
+				</section>
+
+				<section data-transition="fade">
+					<h2 class="dotted-border">Transformative Impact of AI on Historical Map Analysis</h2>
+
+					<aside class="notes">
+						Now that we've looked at that, I wanted to take a quick step back and talk about the transformative impact of AI on historical map discovery and analysis.
+
+						Lrge language models have the potential to revolutionize how we explore historical documents, similar to modern generative AI applications we use today, like OpenAI's ChatGPT.
+
+						These models digest and comprehend enormous amounts of data in one go, offering rich contextual answers, moving beyond traditional query methods like searching text to match keywords found in metadata. 
+
+						But the potential goes beyond just searching for maps and content when we semantically enrich these models with external domain-specific or other external knowledge bases. 
+
+						For example A future step in this technology would be for a user to be able to search for “shipwreck” and finding not only occurrences of the same word in different languages, but also variants and synonyms with closely related meanings.
+
+By integrating textual information derived from historical maps with these models, we open the door to a wide range of new possibilities. Domain-specific versions of LLMs could be fine-tuned with cartographic terminology, cataloging metadata, toponyms, and map history literature.  Leading to new types of historical geographic analyses. 
+
+Data quality challenges
+
+It’s crucial to remember that maps are never representations of fact; they always carry inherent biases and subjectivity. Still, the development of new tools and approaches with text from historical maps can provide dynamic learning experiences and a deeper understanding of concepts that began as questions. The transparency of its flaws and open-ness of extracted text data allows us to tinker and experiment with its usefulness and understand its full potential.
+
+					  </aside>
+				</section>
+				
+
+				<section data-transition="fade"
+					data-background-image="img/evan.jpg" data-background-size="cover">
+					<h3  class="dotted-border">davidrumsey.com →→→ future</h3>
+					<div><ul>
+						<li>
+							AI Chatbox
+						</li>
+						<li>
+							Image transcription
+						</li>
+						<li>
+							Enhanced metadata tools
+						</li>
+					</ul></div>
+				
+					<aside class="notes">
+					  </aside>
+				</section>
+				
+				<section data-transition="fade">
+					<h3>Machines Reading Maps links</h3>
+					<p>machines-reading-maps.github.io</p>
+					<p>knowledge-computing.github.io</p>
+				
+					<aside class="notes">
+					  </aside>
+				</section>
+
+				<section data-transition="fade">
+					<h3>MapReader links</h3>
+					<p>mapreader.readthedocs.io</p>
+					<p>livingwithmachines.ac.uk</p>
+		
+					<aside class="notes">
+					  </aside>
+				</section> -->
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Display presentation control arrows
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: "bottom-right",
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: "faded",
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: false,
+
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: "all",
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
