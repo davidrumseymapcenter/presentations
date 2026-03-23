@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Info We Trust</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			@keyframes blink {
+				0% { opacity: 0 }
+   50% { opacity: 1 }
+   100% { opacity: 0 }
+        }
+
+        .blinking-text {
+            animation: blink 1.5s infinite;
+   animation-fill-mode: both;
+        }
+			.highlight {
+    			background-color: yellow; /* You can change this color to your preferred highlight color */
+				}
+			
+			.white-text {
+				color: white; /* Set the text color to white */
+				padding: 20px; /* Add some padding for content inside the container */
+				}
+
+			.white-text h1 {
+				color: white; /* Set the text color to white */
+				padding: 20px; /* Add some padding for content inside the container */
+				}
+
+			.light-background {
+				background-color: rgba(255, 255, 255, 0.5); /* Use rgba to set the background color with transparency */
+				padding: 20px; /* Add padding for content inside the container */
+				}
+				.center-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      max-height: 90vh; /* Limit the maximum height of the container to 90% of the viewport height */
+      overflow: auto; /* Add scrollbars if content overflows */
+    }
+
+    /* Define a grid container */
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+      gap: 10px; /* Reduce the gap between QR codes */
+    }
+
+    /* Style for individual QR code items */
+    .qr-code {
+      width: 100%; /* Ensure the QR codes take up the full width of their container */
+      max-width: 300px; /* Limit the maximum width of each QR code */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+	.dotted-border {
+		border: 5px; 
+		border-radius:25px; 
+		border-style:dotted; 
+		border-color: rgb(90, 134, 182); 
+		margin: 50px; 
+		padding: 20px;
+	}
+
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="fade">
+					<img data-src="img/10057000.jpg" style="height:600px; object-fit: contain;"></img>
+					<small><em>Picture of Organized Nature as Extending Over the Earth.</em> Translated from the German for C. Smith & Son. 172, Strand. 1828</small>
+					<aside class="notes">
+						I wanted to start us off with this incredible image from our collection. Created in 1828 by John Smith, it’s an attempt to organize knowledge about our world – everything from mountain heights and snowfall lines to where different plants and animals live. It's a beautiful example of early attempts at visualizing scientific data…and a reminder that the challenge of making sense of information and the world isn’t new.
+
+						Today, we face an abundance of info – far more than Smith could have imagined. Data is everywhere, shaping our understanding of everything from public health to political landscapes. But access to data isn’t enough. We need to be able to interpret it – and critically assess how that data is being or will be presented. 
+					  </aside>
+				</section>
+				<section data-transition="fade" data-background-image="img/15_6_mccloudFaces.png" data-background-size="contain">
+					
+					<aside class="notes">
+						That’s what brings us here this afternoon, and why we’re so thrilled to welcome RJ Andrews! He’ll be discussing his new book, Info We Trust, a dive into how we create value with data graphics.
+
+						RJ is a leading expert in data visualization – his work has appeared everywhere from National Geographic to Oprah Magazine. He's much more than a designer. He’s a historian, researcher, and storyteller who understands how data graphics shape our understanding of the world.
+
+						His books explore the history of data visulaization, while his projects for organizations like Airbnb and The 2016 White House Office of Science and Technology Policy demonstrate how these principles can be applied in real-world settings.
+
+						And RJ is also a great friend to the David Rumsey Map Center! He’s curated an exhibition here, designed keepsakes for us, given talks at this very podium, and even opened up his incredible personal library of historical data visualizations for a staff field trip. Every time we get to work with RJ, we learn so much and have a great time.
+					  </aside>
+				</section>
+
+				<section data-transition="fade" data-background-image="https://infowetrust.com/wp-content/uploads/2024/08/InfoWeTrust-cover-yellowBackground-1320sq.jpg" data-background-size="contain">
+					
+					<aside class="notes">
+
+						RJ’s Info We Trust isn’t just about how to create meaningful data graphics. While he includes a range of ideas and best practices, it's not a manual or guide. Instead he humanizes data storytelling as a deeply interdisciplinary practice – drawing on history, linguistics, design, even cognitive psychology – and shares stories and analogies for crafting compelling data graphics. And the book itself reflects this breadth, peppered with insightful quotes and acknowledgements to the pioneers who have influenced the art of data graphics.
+
+						RJ emphasizes that data isn't abstract; it’s ‘rooted in lived experiences.’ He explores the entire process, from initial exploring and tinkering to crafting compelling narratives. He frames this process as a 'hero cycle' – venturing into raw data to bring back insights that can improve our world, confronting chaos to create order.
+
+						Ultimately, Info We Trust argues that data, like water, can nourish or it can drown us. Building trust requires time, thoughtful design, and a commitment to telling stories that give life meaning. Without narrative, life reduces to mere biology; it becomes real only when we narrate it.”
+
+						I hope you enjoy reading this book as much as I did. It's full of insight, ideas, stories, and many thought provoking (and fun) sections. I'll end by sharing one of my favorite quotes from the book:
+
+						"Storytelling-icing is delicious; but only if you're frosting the finest data cake"
+
+						•	Welcome RJ Andrews
+					  </aside>
+				</section>
+
+				
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				  // Display presentation control arrows
+  					controls: false,
+
+				// Help the user learn the controls by providing hints, for example by
+				// bouncing the down arrow when they first encounter a vertical slide
+					controlsTutorial: false,
+
+				// Determines where controls appear, "edges" or "bottom-right"
+					controlsLayout: 'bottom-right',
+
+				// Visibility rule for backwards navigation arrows; "faded", "hidden"
+				// or "visible"
+					controlsBackArrows: 'faded',
+
+				// Display a presentation progress bar
+					progress: false,
+
+				// Display the page number of the current slide
+				// - true:    Show slide number
+				// - false:   Hide slide number
+				//
+				// Can optionally be set as a string that specifies the number formatting:
+				// - "h.v":   Horizontal . vertical slide number (default)
+				// - "h/v":   Horizontal / vertical slide number
+				// - "c":   Flattened slide number
+				// - "c/t":   Flattened slide number / total slides
+				//
+				// Alternatively, you can provide a function that returns the slide
+				// number for the current slide. The function should take in a slide
+				// object and return an array with one string [slideNumber] or
+				// three strings [n1,delimiter,n2]. See #formatSlideNumber().
+					slideNumber: false,
+
+				// Can be used to limit the contexts in which the slide number appears
+				// - "all":      Always show the slide number
+				// - "print":    Only when printing to PDF
+				// - "speaker":  Only in the speaker view
+					showSlideNumber: 'all',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

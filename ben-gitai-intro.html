@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Mapping Time, Space and Habitat</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .blinking-text {
+        animation: blink 1.5s infinite;
+        animation-fill-mode: both;
+      }
+      .highlight {
+        background-color: yellow; /* You can change this color to your preferred highlight color */
+      }
+
+      .white-text {
+        color: white; /* Set the text color to white */
+        padding: 20px; /* Add some padding for content inside the container */
+      }
+
+      .white-text h1 {
+        color: white; /* Set the text color to white */
+        padding: 20px; /* Add some padding for content inside the container */
+      }
+
+      .light-background {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /* Use rgba to set the background color with transparency */
+        padding: 20px; /* Add padding for content inside the container */
+      }
+      .center-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        max-height: 90vh; /* Limit the maximum height of the container to 90% of the viewport height */
+        overflow: auto; /* Add scrollbars if content overflows */
+      }
+
+      /* Define a grid container */
+      .qr-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+        gap: 10px; /* Reduce the gap between QR codes */
+      }
+
+      /* Style for individual QR code items */
+      .qr-code {
+        width: 100%; /* Ensure the QR codes take up the full width of their container */
+        max-width: 300px; /* Limit the maximum width of each QR code */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      .dotted-border {
+        border: 5px;
+        border-radius: 25px;
+        border-style: dotted;
+        border-color: rgb(90, 134, 182);
+        margin: 50px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-transition="fade"
+          data-background-image="img/ben-gitai-intro-slide.png"
+        >
+          <aside class="notes">
+            Good afternoon, everyone, and welcome! It’s wonderful to see so many
+            of you here today. I’m Evan Thornberry, the head and curator here at
+            the map center, and before I welcome our speaker, I want to briefly
+            acknowledge the nine year anniversary of the David Rumsey Map
+            Center. This is the first anniversary I’ve had here where I can
+            reflect on a full year.
+          </aside>
+        </section>
+        <section data-transition="fade" data-background-image="img/umar.JPG">
+          <aside class="notes">
+            The map center isn’t as a repository for Stanford’s amazing map
+            collections, or a hub for discussions, research, and events like
+            this. We’re also as an integral part of the student experience. To
+            me, that commitment to students in the last year has been visible in
+            so many ways - whether they were part of the 80 or so classes that
+            visited us or are one of our several fantastic student employees who
+            contribute to making this space a welcoming and open environment for
+            learning and research. Over the last year, we invited new types
+            contributions from students like Umar Patel, who last year developed
+            an app for the Apple Vision Pro, mashing up historical maps and
+            photographs into a virtual workd to explore, or Julie van den Hout
+            and Jenny O’Keefe, who are currently providing invaluable
+            instructional support for the many class visits we see throughout
+            the year.
+          </aside>
+        </section>
+
+        <section
+          data-transition="fade"
+          data-background-iframe="img/sanfrancisco/openlayers.html"
+        >
+          <aside class="notes">
+            A couple of weeks ago we partnered with Kim Beil, who is the
+            associate director of Stanford’s ITALIC program, to host the
+            Japanese artist Sohei Nishino. Sohei is known for his city dioramas
+            made up of thousands of photographs taken by the artist over the
+            course of a few months, then compiled into memoryscapes reflecting
+            his lived experience and perceptions of the city.
+          </aside>
+        </section>
+
+        <section
+          data-transition="fade"
+          data-background-video="img/italic_frottage_timelapse.mp4"
+          data-background-video-loop="true"
+        >
+          <aside class="notes">
+            While at Stanford, Sohei also led a workshop where ITALIC students
+            created their own map of Stanford's campus based on their
+            experiences and memories, using rubbings of objects on campus they
+            pass by everyday, or might be overlooked. Kim describes this as “a
+            map of feeling” or textures of campus, and is the inspiration for
+            this anniversary's keepsake poster, which will always remind us of
+            Sohei's visit, the 2025 ITALIC program, and the roles we can play in
+            the experiences of students here at Stanford.
+          </aside>
+        </section>
+
+        <section
+          data-transition="fade"
+          data-background-image="img/ben-gitai-intro-slide.png"
+        >
+          <aside class="notes">
+            This a good segway into my introduction to our speaker today, Dr.
+            Ben Gitai. Ben, an architect and researcher at the EPFL in Lausanne
+            Switzerland is the Head Coordinator at EPFL's Habitat Research
+            Center. Ben's work investigates how landscapes evolve – not just
+            physically, but also through history, politics, and the way we
+            perceive them. He’s recently launcehd a fascinating and impactfful
+            project: the Atlas of Landscapes of Paris, a deep dive into the
+            city’s terrain, its stories, and the many visions that have shaped
+            it. Working with Ben these past days has been incredible. His
+            visions are for truly living maps of cities like San Francisco, –
+            incorporating perspectives from residents, wildlife, even cars and
+            bikes we use move through the city. It's not just about boundaries,
+            but understanding how our experiences shape our cultural landscapes.
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Display presentation control arrows
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: "bottom-right",
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: "faded",
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: false,
+
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: "all",
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>SERG 2026 Big Picture</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+
+    <style>
+      .dotted-border {
+        border: 5px;
+        border-radius: 25px;
+        border-style: dotted;
+        border-color: white;
+        margin: 50px;
+        padding: 20px;
+      }
+
+      .dark-box {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px 30px;
+        border-radius: 8px;
+        display: inline-block;
+      }
+
+      .img-placeholder {
+        border: 3px dashed rgba(255, 255, 255, 0.4);
+        border-radius: 12px;
+        padding: 40px 20px;
+        color: rgba(255, 255, 255, 0.5);
+        font-style: italic;
+        font-size: 0.85em;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      .tag {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 4px 14px;
+        font-size: 0.7em;
+        margin: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- TITLE -->
+        <!-- <section data-transition="fade">
+          <div class="dotted-border">
+            <h3>David Rumsey Map Center</h3>
+            <p>Updates &amp; Looking Ahead</p>
+          </div>
+          <small>Evan Thornberry, Head and Curator, David Rumsey Map Center</small>
+          <aside class="notes">
+            Good [morning/afternoon] everyone. I have three short updates to share today — our upcoming 10th anniversary celebration, a new Stanford designation around the Allmaps project, and some work we're beginning around describing our core collections. This should take about five minutes.
+          </aside>
+        </section> -->
+
+        <!-- ANNIVERSARY TITLE SLIDE -->
+        <!-- <section
+          data-transition="fade"
+          data-background-image="img/drmc_9anniversary_poster.png"
+          data-background-size="contain"
+          data-background-color="#111"
+        >
+          <aside class="notes">
+            First — the big one. The David Rumsey Map Center turns 10 this year. We opened in May 2016, so May 2026 marks a decade. [Note: adjust year as needed.] We're planning several events around this milestone.
+          </aside>
+        </section> -->
+
+        <!-- ANNIVERSARY EVENTS -->
+        <section data-transition="fade">
+          <img
+            src="img/0119.jpg"
+            alt="interior"
+            style="width: 45%; height: auto; border-radius: 12px"
+          />
+          <h3>Celebrating 10 Years</h3>
+          <p><span class="tag">Thursday, May 21 — Afternoon</span></p>
+          <ul>
+            <li>Public talk by the <strong>Global Policy Lab</strong></li>
+            <li>Donor event with <strong>Rick Prelinger</strong></li>
+            <li>And more...</li>
+          </ul>
+          <!-- <div class="img-placeholder">
+            <img
+              src="img/0119.jpg"
+              alt="interior"
+              style="width: 75%; height: auto; border-radius: 12px"
+            />
+          </div> -->
+          <aside class="notes"></aside>
+        </section>
+
+        <!-- ALLMAPS INNOVATOR -->
+        <section data-transition="fade">
+          <h3>SUL as an Allmaps <em>Innovator</em></h3>
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 1440 1440"
+            xml:space="preserve"
+            style="height: 200px; width: auto"
+          >
+            <style type="text/css">
+              .st0 {
+                fill: #ffffff;
+              }
+            </style>
+            <g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,703.8 164.8,1031.6 720,1359.5 1275.2,1031.6"
+                ></polygon>
+                <path
+                  d="M720,625.3L31.8,1031.6L720,1438l688.2-406.4L720,625.3z M720,703.8l555.2,327.8L720,1359.5l-555.2-327.8L720,703.8z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,548 164.8,875.8 720,1203.7 1275.2,875.8"
+                ></polygon>
+                <path
+                  d="M720,469.5L31.8,875.8L720,1282.2l688.2-406.4L720,469.5z M720,548l555.2,327.8L720,1203.7L164.8,875.8L720,548z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,392.2 164.8,720 720,1047.9 1275.2,720"
+                ></polygon>
+                <path
+                  d="M720,313.7L31.8,720L720,1126.4L1408.2,720L720,313.7z M720,392.2L1275.2,720L720,1047.9L164.8,720L720,392.2z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,236.3 164.8,564.2 720,892 1275.2,564.2"
+                ></polygon>
+                <path
+                  d="M720,157.8L31.8,564.2L720,970.5l688.2-406.3L720,157.8z M720,236.3l555.2,327.8L720,892L164.8,564.2L720,236.3z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,80.5 164.8,408.4 720,736.2 1275.2,408.4"
+                ></polygon>
+                <path
+                  d="M720,2L31.8,408.4L720,814.7l688.2-406.4L720,2z M720,80.5l555.2,327.8L720,736.2L164.8,408.4L720,80.5z"
+                ></path>
+              </g>
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="M610.5,404l216.7-69.9l-121.3,125L610.5,404 M986,288.6l-80.6-46.5L297.4,420.8l93.5,54L513.6,435l138.1,79.8l-68.6,71.1l93.5,54L986,288.6"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <aside class="notes">
+            Second update: through conversations with Zoe and Stace, we
+            advocated for Stanford to be recognized as an "Innovator" in the
+            Allmaps community. This is a designation that comes with both
+            visibility and direction — and I want to briefly explain why it
+            matters.
+          </aside>
+        </section>
+
+        <!-- ALLMAPS SIGNIFICANCE -->
+        <section data-transition="fade">
+          <h4>Why Allmaps matters for DRMC</h4>
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 1440 1440"
+            xml:space="preserve"
+            style="height: 75px; width: auto"
+          >
+            <style type="text/css">
+              .st0 {
+                fill: #ffffff;
+              }
+            </style>
+            <g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,703.8 164.8,1031.6 720,1359.5 1275.2,1031.6"
+                ></polygon>
+                <path
+                  d="M720,625.3L31.8,1031.6L720,1438l688.2-406.4L720,625.3z M720,703.8l555.2,327.8L720,1359.5l-555.2-327.8L720,703.8z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,548 164.8,875.8 720,1203.7 1275.2,875.8"
+                ></polygon>
+                <path
+                  d="M720,469.5L31.8,875.8L720,1282.2l688.2-406.4L720,469.5z M720,548l555.2,327.8L720,1203.7L164.8,875.8L720,548z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,392.2 164.8,720 720,1047.9 1275.2,720"
+                ></polygon>
+                <path
+                  d="M720,313.7L31.8,720L720,1126.4L1408.2,720L720,313.7z M720,392.2L1275.2,720L720,1047.9L164.8,720L720,392.2z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,236.3 164.8,564.2 720,892 1275.2,564.2"
+                ></polygon>
+                <path
+                  d="M720,157.8L31.8,564.2L720,970.5l688.2-406.3L720,157.8z M720,236.3l555.2,327.8L720,892L164.8,564.2L720,236.3z"
+                ></path>
+              </g>
+              <g>
+                <polygon
+                  class="st0"
+                  points="720,80.5 164.8,408.4 720,736.2 1275.2,408.4"
+                ></polygon>
+                <path
+                  d="M720,2L31.8,408.4L720,814.7l688.2-406.4L720,2z M720,80.5l555.2,327.8L720,736.2L164.8,408.4L720,80.5z"
+                ></path>
+              </g>
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="M610.5,404l216.7-69.9l-121.3,125L610.5,404 M986,288.6l-80.6-46.5L297.4,420.8l93.5,54L513.6,435l138.1,79.8l-68.6,71.1l93.5,54L986,288.6"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <ul>
+            <li>
+              Open toolkit built on <strong>IIIF</strong> — no GIS training
+              required to georeference maps
+            </li>
+            <li>
+              Lowers the barrier for researchers, students, and the public
+            </li>
+            <li>
+              Gives us a clear direction for integrating DRMC collections into
+              <strong>Earthworks</strong>
+            </li>
+          </ul>
+          <div class="img-placeholder">allmaps.org</div>
+          <aside class="notes">
+            Allmaps is a web-based georeferencing toolkit that works with any
+            IIIF-compliant image server — which our collections already are. The
+            big deal is that it largely eliminates the need for GIS training to
+            begin making historical maps machine-readable. Anyone can open a map
+            in a browser and start placing control points. The Innovator
+            designation gives us a recognized place in that ecosystem and an
+            open playing field for connecting more of our collections to
+            Earthworks, Stanford's geospatial discovery platform.
+          </aside>
+        </section>
+
+        <!-- CORE COLLECTIONS - PROBLEM -->
+        <section data-transition="fade">
+          <h3>Developing "Core Collections"</h3>
+          <ul>
+            <li>
+              We lack cohesive, public-facing descriptions of what makes DRMC
+              special
+            </li>
+            <li>
+              What we have tends to revolve around <em>donors</em>, not
+              intellectual themes
+            </li>
+            <li>
+              Hard to communicate our strengths — to researchers, funders, or
+              new colleagues
+            </li>
+          </ul>
+          <div class="img-placeholder">The maps that make us, us</div>
+          <aside class="notes">
+            Third, we're beginning work on what I'm calling "Core Collections" —
+            a way of describing the thematic and intellectual strengths of the
+            DRMC that doesn't just index what donors gave us. Right now, if
+            someone asks what our collection is *about*, the honest answer is
+            that we don't have a clean way to tell that story. Descriptions
+            exist, but they're organized around acquisition history, not around
+            the ideas or geographies or eras the collections illuminate.
+          </aside>
+        </section>
+
+        <!-- CORE COLLECTIONS - VISION -->
+        <section
+          data-transition="fade"
+          data-background-image="img/0004.jpg"
+          data-background-opacity="0.3"
+        >
+          <div class="dark-box">
+            <h4>Core Collections will help us:</h4>
+            <ul>
+              <li><strong>Communicate</strong> our strengths clearly</li>
+              <li>
+                <strong>Showcase</strong> collections in discovery and outreach
+                (...including a fall exhibition!)
+              </li>
+              <li>
+                <strong>Steward</strong> with intention — acquisitions,
+                scanning, conservation, special projects
+              </li>
+            </ul>
+          </div>
+          <aside class="notes">
+            Core collections descriptions will give us a common vocabulary — for
+            talking to donors, for prioritizing digitization, for building new
+            finding aids and exhibitions, and for orienting new staff. Think of
+            it as the intellectual architecture that sits above individual
+            catalog records. More to come on this as it develops.
+          </aside>
+        </section>
+
+        <!-- CLOSE -->
+        <section data-transition="fade">
+          <h2>Thank you</h2>
+          <p style="opacity: 0.6; font-size: 0.8em">
+            10th Anniversary · Allmaps Innovator · Core Collections
+          </p>
+          <aside class="notes">
+            That's it — three updates, five minutes. Happy to answer any
+            questions or talk more about any of these.
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        controls: false,
+        controlsTutorial: false,
+        progress: false,
+        slideNumber: false,
+        transition: "fade",
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
