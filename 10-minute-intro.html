@@ -1,193 +1,381 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Introduction to the DRMC</title>
+    <title>Introduction to the DRMC</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/white.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/serif.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-		<style>
-			.highlight {
-    			background-color: yellow; /* You can change this color to your preferred highlight color */
-				}
-			
-			.white-text {
-				color: white; /* Set the text color to white */
-				padding: 20px; /* Add some padding for content inside the container */
-				}
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      .highlight {
+        background-color: yellow; /* You can change this color to your preferred highlight color */
+      }
 
-			.white-text h1 {
-				color: white; /* Set the text color to white */
-				padding: 20px; /* Add some padding for content inside the container */
-				}
+      .white-text {
+        color: white; /* Set the text color to white */
+        padding: 20px; /* Add some padding for content inside the container */
+      }
 
-			.light-background {
-				background-color: rgba(255, 255, 255, 0.5); /* Use rgba to set the background color with transparency */
-				padding: 20px; /* Add padding for content inside the container */
-				}
-				.center-container {
-      display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
-      max-height: 90vh; /* Limit the maximum height of the container to 90% of the viewport height */
-      overflow: auto; /* Add scrollbars if content overflows */
-    }
+      .white-text h1 {
+        color: white; /* Set the text color to white */
+        padding: 20px; /* Add some padding for content inside the container */
+      }
 
-    /* Define a grid container */
-    .qr-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
-      gap: 10px; /* Reduce the gap between QR codes */
-    }
+      .light-background {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.5
+        ); /* Use rgba to set the background color with transparency */
+        padding: 20px; /* Add padding for content inside the container */
+      }
 
-    /* Style for individual QR code items */
-    .qr-code {
-      width: 100%; /* Ensure the QR codes take up the full width of their container */
-      max-width: 300px; /* Limit the maximum width of each QR code */
-      height: auto; /* Maintain aspect ratio */
-    }
+      /* Text left, decorative image panel down the right edge.
+			   Reveal copies a section's classes onto its background element, so
+			   .panel-bg narrows the slide background into a full-height panel
+			   that bleeds top to bottom. It keeps reveal's default cover sizing,
+			   so the image crops rather than stretches. */
+      .slide-background.panel-bg .slide-background-content {
+        left: auto;
+        right: 0;
+        width: 38%;
+      }
 
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background-image="img/0119.jpg" data-background-size="cover">
-					<div class="light-background"><h1>Welcome</h1>
-					<h3>David Rumsey Map Center</h3>
-					<p>Niles Dorn</p>
-					<p>Laura Krueger</p>
-					<p>Kristina Larsen</p>
-					<p>Laura Swenson</p>
-					<p>Evan Thornberry</p></div>
-				</section>
-					<aside class="notes">
-				- Say your name and introduce others; explain your role + history at center
-				- Center opened here at Stanford in 2016
-					  </aside>
-				</section>
-				<section data-background-image="img/0107.jpg" data-background-size="cover">
-					<aside class="notes">
-				- Lives in SF, very involved with day-to-day operations
-				- 80’s started collecting; 90’s website/digitization project
-				- Use of DavidRumsey.com for discovery tools
-					</aside>
-				</section>
+      .panel-slide {
+        text-align: left;
+        padding-right: 42%; /* keep the text clear of the panel */
+      }
 
-				<section data-background-image="img/0119.jpg" data-background-size="cover">
-					<div class="light-background"><h1>DRMC Collections</h1>
-					<p>Numbers in the many thousands of items</p>
-					<p>Includes David's maps <em>AND MORE!</em></p>
-					<p>Core strengths</p>
-					<p>Continued growth</p>
-					<p>Metadata + scanning</p></div>
-				</section>
-					<aside class="notes">
-					  </aside>
-				</section>
-				
-				<section>
-					<h2>A <span class="highlight">Center</span></h2>
-					<p><em>The DRMC works to curate and maintain the historical map collection at Stanford University Library. We serve as a multidisciplinary hub dedicated to advancing education, fostering learning, and supporting research through the use of historical spatial and cartographic data.</em></p>
-					<aside class="notes">
-						Here at the DRMC, we're responsible for curating and maintaining Stanford University Library's historical map collection. We actively promote engagement with historical maps, whether in their physical form or as digital surrogates, encouraging their use as valuable data sources. By digitizing and making this materials accessible virtually, we facilitate the integration of historical maps into digital and online environments. In that sense our mission is to foster and promote exploration through the use of historical materials and modern technology.
-					</aside>
-				</section>
+      .panel-slide h1,
+      .panel-slide h2,
+      .panel-slide h3 {
+        text-align: left;
+        margin-bottom: 0.3em;
+      }
 
-				<section data-background-image="img/0002.jpg" data-background-size="cover">
-					<div class="light-background"><h1>DRMC Space</h1>
-					<p>Classes</p>
-					<p>Speaker Events</p>
-					<p>Exhibitions</p>
-					<p>Reading Room</p>
-					<p>Guided Tours</p></div>
-					<aside class="notes">
-					</aside>
-				</section>
-				<section class="dark-slide" data-background-image="img/0004.jpg" data-background-size="cover">
-					<div class="white-text">
+      .panel-slide p {
+        margin: 0.15em 0;
+        font-size: 0.75em;
+      }
 
-					<h1>Essential Takeaways</h1>
-					<p>We value both digital and physical equally</p>
-					<p>Our site(s) are a great starting point</p>
-					<p>Get in touch. We're here for you</p></div>
-					<aside class="notes">
-					- Librarians are here to help you find material in the collections
-					- We want you to get an idea of what is possible
-					- Everything we look at on screens can be accessed online
-					- You can come back to review when it becomes relevant (specific assignment / project / research question)
-					- There are self-paced tutorials available on how to discover and use
-					</aside>
-				</section>
-				<section>
-					<div class="white-text">
+      /* Logo lockup above the title; strips the theme's default img frame */
+      .panel-slide .logo {
+        width: 380px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 0 0.9em;
+        border: none;
+        background: none;
+        box-shadow: none;
+      }
+      /* Takeaways: three separate thoughts, each numbered and set apart
+			   by its own rule so they don't read as one run-on list */
+      .takeaways {
+        margin-top: 0.6em;
+      }
 
-					<h2>Getting Started Online</h2>
-					<div class="center-container">
-					<div class="qr-grid">
-						<!-- QR Code 1 -->
-						<div class="qr-code">
-						<small style="color:black";><a href="https://www.davidrumsey.com" target="_blank">davidrumsey.com</a></small>
-						  <img src="img/davidrumsey.png" alt="QR Code 1">
-						</div>
-					
-						<!-- QR Code 2 -->
-						<div class="qr-code">
-							<small style="color:black";><a href="https://searchworks.stanford.edu" target="_blank">searchworks.stanford.edu</a></small>
-						  <img src="img/searchworks.png" alt="QR Code 2">
-						</div>
-					
-						
-					  </div>
-					</div>
-					<aside class="notes">
-					
-					</aside>
-				</section>
-				<section>
-					<div class="white-text">
+      .takeaways .takeaway {
+        display: flex;
+        align-items: baseline;
+        gap: 0.7em;
+        padding: 0.55em 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.18);
+      }
 
-					<h2>Getting Started Online</h2>
-					<div class="center-container">
-					
-						<!-- QR Code 1 -->
-						<div class="qr-code">
-						<small style="color:black";> <a href="https://library.stanford.edu/libraries/david-rumsey-map-center" target="_blank">library.stanford.edu/libraries/david-rumsey-map-center</a></small>
-						  <img src="img/drmc.png" alt="QR Code 1">
-						</div>
-					
-						
-					
-						
-					
-					</div>
-					<aside class="notes">
-					
-					</aside>
-				</section>
-			</div>
-		</div>
+      .takeaways .takeaway:last-child {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+      }
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      .takeaways .num {
+        font-size: 0.85em;
+        line-height: 1;
+        opacity: 0.45;
+        min-width: 1.2em;
+      }
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+      .takeaways .takeaway h4 {
+        margin: 0 0 0.15em;
+        font-size: 0.62em;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.6;
+      }
+
+      .panel-slide .takeaways p {
+        margin: 0;
+        font-size: 0.72em;
+        line-height: 1.3;
+      }
+
+      /* Two-column slide: inset screenshot on the left, QR + caption on the right */
+      .inset-slide {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        text-align: left;
+      }
+
+      .inset-slide .inset-figure {
+        flex: 1 1 60%;
+      }
+
+      .inset-slide .inset-figure img {
+        width: 100%;
+        max-height: 560px;
+        object-fit: contain;
+        display: block;
+        margin: 0;
+        border: none;
+        background: none;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
+      }
+
+      .inset-slide .inset-aside {
+        flex: 0 1 32%;
+      }
+
+      .inset-slide .inset-aside h3 {
+        text-align: left;
+        margin: 0 0 0.4em;
+        font-size: 1.1em;
+      }
+
+      .inset-slide .inset-aside .qr {
+        width: 190px;
+        max-width: 100%;
+        display: block;
+        margin: 0 0 0.5em;
+        border: none;
+        background: none;
+        box-shadow: none;
+      }
+
+      .inset-slide .inset-aside small {
+        display: block;
+        font-size: 0.4em;
+        word-break: break-word;
+      }
+
+      .center-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        max-height: 90vh; /* Limit the maximum height of the container to 90% of the viewport height */
+        overflow: auto; /* Add scrollbars if content overflows */
+      }
+
+      /* Define a grid container */
+      .qr-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+        gap: 10px; /* Reduce the gap between QR codes */
+      }
+
+      /* Style for individual QR code items */
+      .qr-code {
+        width: 100%; /* Ensure the QR codes take up the full width of their container */
+        max-width: 300px; /* Limit the maximum width of each QR code */
+        height: auto; /* Maintain aspect ratio */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="panel-bg" data-background-image="img/monte001.png">
+          <div class="panel-slide">
+            <img
+              class="logo"
+              src="img/StanfordUniversityLibrarieslogo_rgb.png"
+              alt="Stanford University Libraries"
+            />
+            <h2>The David Rumsey Map Center</h2>
+            <p>Evan Thornberry</p>
+            <small>Head Librarian and Curator</small>
+          </div>
+          <aside class="notes">
+            - Say your name and introduce others; explain your role + history at
+            center - Center opened here at Stanford in 2016
+          </aside>
+        </section>
+
+        <section
+          data-background-image="img/0002.jpg"
+          data-background-size="cover"
+        >
+          <div class="light-background">
+            <h3>Collections</h3>
+
+            <h3>Innovation</h3>
+
+            <h3>Programming</h3>
+            <small
+              ><em
+                >Collections become most valuable when they are open and
+                gathered around by a community of people who care about
+                them.</em
+              ></small
+            >
+          </div>
+          <aside class="notes"></aside>
+        </section>
+
+        <section>
+          <div class="inset-slide">
+            <div class="inset-figure">
+              <img
+                src="img/drmcHomepage.png"
+                alt="David Rumsey Map Center homepage"
+              />
+            </div>
+            <div class="inset-aside">
+              <h3>David Rumsey Map Center Website</h3>
+              <img
+                class="qr"
+                src="img/drmc.png"
+                alt="QR code linking to the DRMC website"
+              />
+              <small
+                ><a
+                  href="https://library.stanford.edu/libraries/david-rumsey-map-center"
+                  target="_blank"
+                  >library.stanford.edu/libraries/david-rumsey-map-center</a
+                ></small
+              >
+            </div>
+          </div>
+          <aside class="notes"></aside>
+        </section>
+
+        <section>
+          <div class="inset-slide">
+            <div class="inset-figure">
+              <img
+                src="img/searchworksscreenshot.png"
+                alt="SearchWorks Online Catalog homepage"
+              />
+            </div>
+            <div class="inset-aside">
+              <h3>SearchWorks Online Catalog</h3>
+              <img
+                class="qr"
+                src="img/searchworks.png"
+                alt="QR code linking to the SearchWorks website"
+              />
+              <small
+                ><a href="https://searchworks.stanford.edu" target="_blank"
+                  >searchworks.stanford.edu</a
+                ></small
+              >
+            </div>
+          </div>
+          <aside class="notes"></aside>
+        </section>
+
+        <section>
+          <div class="inset-slide">
+            <div class="inset-figure">
+              <img
+                src="img/davidrumsey.png"
+                alt="David Rumsey Map Collections homepage"
+              />
+            </div>
+            <div class="inset-aside">
+              <h3>David Rumsey Collection</h3>
+              <img
+                class="qr"
+                src="img/davidrumseyqr.png"
+                alt="QR code linking to the DRMC website"
+              />
+              <small
+                ><a href="https://davidrumsey.com" target="_blank"
+                  >davidrumsey.com</a
+                ></small
+              >
+            </div>
+          </div>
+          <aside class="notes"></aside>
+        </section>
+
+        <section class="panel-bg" data-background-image="img/0004.jpg">
+          <div class="panel-slide">
+            <h3>Essential Takeaways</h3>
+            <div class="takeaways">
+              <div class="takeaway fragment fade-in">
+                <span class="num">1</span>
+                <div>
+                  <h4>What a map is</h4>
+                  <p>
+                    Every map is both a record of a place and an object of its
+                    time.
+                  </p>
+                </div>
+              </div>
+              <div class="takeaway fragment fade-in">
+                <span class="num">2</span>
+                <div>
+                  <h4>Where to start</h4>
+                  <p>
+                    Our online catalogs are the best entry point for exploring.
+                  </p>
+                </div>
+              </div>
+              <div class="takeaway fragment fade-in">
+                <span class="num">3</span>
+                <div>
+                  <h4>Who to ask</h4>
+                  <p>Please get in touch. We're here for you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-bg" data-background-image="img/hero.png">
+          <div class="panel-slide">
+            <img
+              class="logo"
+              src="img/StanfordUniversityLibrarieslogo_rgb.png"
+              alt="Stanford University Libraries"
+            />
+            <h2>Thank you</h2>
+            <p>
+              Evan Thornberry
+              <a href="mailto:evanthornberry@stanford.edu"
+                >evanthornberry@stanford.edu</a
+              >
+            </p>
+          </div>
+          <aside class="notes"></aside>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
